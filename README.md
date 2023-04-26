@@ -9,7 +9,7 @@ For 1-d TM patterns, currently available are functions for the calculation of
 - intensity reflectance, transmittance, and layer-by-layer absorbance 
 - the full 2x2 scattering matrix 
 - the E and S fields inside the structure
-- 
+ 
 The proper factorization rules [c,d] make the code extremely performing, and fully suitable for the simulation of metal components (plasmonic gratings).
 Out-of-plane uniaxial materials can be treated.
 For 1-d biaxial media, the following function is available:
@@ -24,7 +24,7 @@ The present code is distributed for free, but we kindly ask you to cite its sour
 Several publications are based on PPML (see below). For some of them, you can find the corresponding tutorial in the software package.
 
 
-# Publications based on PPML (not exhaustive list)
+## Publications based on PPML (not exhaustive list)
 1. S. Zanotto, ... A. Pitanti, "Photonic bands, superchirality, and inverse design of a chiral minimal metasurface", Nanophotonics (2019), DOI: 10.1515/nanoph-2019-0321
 2. S. Zanotto, ... A. Pitanti, "Optomechanics of Chiral Dielectric Metasurfaces", Advanced Optical Materials (2020), DOI: 10.1002/adom.201901507
 3. S. Zanotto, ... D. S. Wiersma, "Multichannel remote polarization control enabled by nanostructured Liquid Crystalline Networks", Applied Physics Letters (2019), DOI 10.1063/1.5096648
@@ -40,7 +40,7 @@ Several publications are based on PPML (see below). For some of them, you can fi
 13. R. Degl'Innocenti, ... A. Tredicucci, “One-dimensional surface-plasmon gratings for the excitation of intersubband polaritons in suspended membranes”, Solid State Comm. 151, 1725-1727 (2011).
 14. S. Zanotto, ... A. Tredicucci, “Intersubband polaritons in a one-dimensional surface plasmon photonic crystal”, Appl. Phys. Lett. 97, 231123 (2010).
 
-# References for the method
+## References for the method
 a. 	D. M. Whittaker & I. S. Culshaw, "Scattering-matrix treatment of patterned multilayer photonic structures",
 Phys. Rev. B 60, 2610 (1999).
 
