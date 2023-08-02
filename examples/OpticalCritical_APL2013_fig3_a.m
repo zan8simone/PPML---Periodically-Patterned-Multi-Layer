@@ -1,5 +1,5 @@
 close all;
-clear all; clc
+clear; clc
 
 % Calculates and plots the angularly-resolved reflectance
 % theoretical counterpart of Fig. 3a of "Optical critical coupling into
@@ -33,9 +33,11 @@ halfnpw = 20;         % good for convergence in this problem
 % Be careful in drawing conclusions!!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+R = zeros(numnu, numtheta);
 for i = 1:numnu
     for j = 1:numtheta
-        [i j]                 % main cycles over energy and angles
+        % main cycles over energy and angles
+        fprintf('Frequency: %i, Theta: %i.\n', i, j) 
 
         % dispersive dielectric constants
         % mind the signs of imag parts (misprint in the APL)
@@ -75,7 +77,7 @@ for i = 1:numnu
 end
 %%
 
-h = pcolor(theta,nu,R)
+h = pcolor(theta,nu,R);
 set(h,'edgecolor','none')
 xlabel('incidence angle (deg)')
 ylabel('frequency (THz)')
