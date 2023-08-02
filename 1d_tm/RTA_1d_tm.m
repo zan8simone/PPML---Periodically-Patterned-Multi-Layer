@@ -10,6 +10,23 @@ function [RR,TT,AA] = RTA_1d_tm(a,L,...
     %  website.
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+    arguments
+        a double {mustBeReal}
+        L double {mustBeReal, mustBeInteger, mustBeNonnegative}
+        epssup double
+        epssub double
+        epsxA double {mustBe1ByL(epsxA, L)}
+        epszA double {mustBe1ByL(epszA, L)}
+        epsxB double {mustBe1ByL(epsxB, L)}
+        epszB double {mustBe1ByL(epszB, L)}
+        sigma double {mustBe1ByLPlus(sigma, L, 1)}
+        f {mustBeReal, mustBe1ByL(f, L)}
+        d double {mustBe1ByLPlus(d, L, 2)}
+        halfnpw {mustBeInteger, mustBeNonnegative, mustBeReal}
+        k0 {mustBeNonnegative, mustBeReal}
+        kpar {mustBeReal}
+    end
+
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Calculates reflection, transmission and absorption.
@@ -184,4 +201,26 @@ function [RR,TT,AA] = RTA_1d_tm(a,L,...
         error('RTA:EnNotCons','Energy not conserved')
     end
 
+end
+
+function mustBe1ByL(array, L)
+    % Custom argument validator function to
+    % check that array is a [1, L] vector
+    sz = size(array);
+    if ~isequal(sz(1), 1) || ~isequal(sz(2), L)
+        eid = 'Size:wrongSize';
+        msg = ['Array has shape [',num2str(sz),'] but should be [1, ',num2str(L),'].'];
+        throwAsCaller(MException(eid,msg))
+    end
+end
+
+function mustBe1ByLPlus(array, L, x)
+    % Custom argument validator function to 
+    % check that array is a [1, L+x] vector
+    sz = size(array);
+    if ~isequal(sz(1), 1) || ~isequal(sz(2), L+x)
+        eid = 'Size:wrongSize';
+        msg = ['Array has shape [',num2str(sz),'] but should be [1, ',num2str(x),'].'];
+        throwAsCaller(MException(eid,msg))
+    end
 end
