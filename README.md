@@ -23,6 +23,9 @@ Conducting interfaces can be seamlessly included in all the geometries by specif
 The present code is distributed for free, but we kindly ask you to cite its source and, if applies, the publications below.
 Several publications are based on PPML (see below). For some of them, you can find the corresponding tutorial in the software package.
 
+[![Open example in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](live_demo)
+
+live_demo: matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/optical_critical_demo.mlx
 
 ## Publications based on PPML (not exhaustive list)
 1. S. Zanotto, ... A. Pitanti, "Photonic bands, superchirality, and inverse design of a chiral minimal metasurface", Nanophotonics (2019), DOI: 10.1515/nanoph-2019-0321
