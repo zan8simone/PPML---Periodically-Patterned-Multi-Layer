@@ -21,7 +21,6 @@ function optical_critical(a, h)
     %   optical resonators" Appl. Phys. Lett. 103, 091110, (2015)
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    addpath('PPML_root')    % to be replaced by the proper path
 
     % Computation parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     numnu = 41;   % Number of frequency points
