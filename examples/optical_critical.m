@@ -77,4 +77,6 @@ function optical_critical(a, h)
     set(h,'edgecolor','none')
     xlabel('incidence angle (deg)')
     ylabel('frequency (THz)')
+    colorbar
+    title('Reflectance')
 end
