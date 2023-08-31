@@ -43,6 +43,8 @@ function optical_critical(a, h, numtheta)
     sigma = [          0            0              0            0                0          ];
 
     epssup = 1;
+    wb = waitbar(0, 'Starting', 'Name', 'Calculating reflectance');
+
     for i = 1:numnu
         % dispersive dielectric constants
         % mind the signs of imag parts (misprint in the APL)
@@ -59,7 +61,7 @@ function optical_critical(a, h, numtheta)
 
         for j = 1:numtheta
             % main cycles over energy and angles
-            fprintf('Frequency: %i, Theta: %i.\n', i, j)
+            waitbar((i/numnu) + (j/(numnu*numtheta)), wb, sprintf("Frequency = %1.2f THz", nu(i)));
 
             kpar = k0*sin(theta(j)*pi/180);
 
@@ -71,6 +73,7 @@ function optical_critical(a, h, numtheta)
 
         end
     end
+    close(wb)
     %%
     if numtheta > 7
         clf
