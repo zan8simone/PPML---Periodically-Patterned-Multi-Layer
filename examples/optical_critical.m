@@ -72,11 +72,15 @@ function optical_critical(a, h, numtheta)
         end
     end
     %%
-
-    h = pcolor(theta,nu,R);
-    set(h,'edgecolor','none')
-    xlabel('incidence angle (deg)')
-    ylabel('frequency (THz)')
-    colorbar
-    title('Reflectance')
+    if numtheta > 7
+        clf
+        s = pcolor(theta,nu,R);
+        set(s,'edgecolor','none')
+        xlabel('Incidence angle (deg)')
+        ylabel('Frequency (THz)')
+        colorbar
+        title('Reflectance')
+    else
+        plot_tiled_reflectance(R, theta, nu)
+    end
 end
