@@ -1,4 +1,4 @@
-function optical_critical(a, h)
+function optical_critical(a, h, numtheta)
     % Calculates and plots the angularly-resolved reflectance
     % theoretical counterpart of Fig. 3a of "Optical critical coupling into
     %                highly confining metal-insulator-metal
@@ -7,6 +7,7 @@ function optical_critical(a, h)
     % Simone Zanotto, Firenze, feb. 2016
     % a: stripe spacing, aka lambda (microns)
     % h: etching depth
+    % numtheta: number of angles
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,7 +26,6 @@ function optical_critical(a, h)
     % Computation parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     numnu = 41;   % Number of frequency points
     nu = linspace(2,4.5,numnu);      % frequencies in THz
-    numtheta = 55;
     theta = linspace(13,67,numtheta);     % angle in degrees (never set 0)
 
     halfnpw = 20;         % good for convergence in this problem
