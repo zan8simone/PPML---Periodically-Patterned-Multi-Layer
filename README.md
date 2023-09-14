@@ -23,11 +23,13 @@ Conducting interfaces can be seamlessly included in all the geometries by specif
 The present code is distributed for free, but we kindly ask you to cite its source and, if applies, the publications below.
 Several publications are based on PPML (see below). For some of them, you can find the corresponding tutorial in the software package.
 
-[![Open example in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)][live_demo]
+[![Open example in MATLAB Online][open_in_matlab_button]][optical_critical_live_demo]
 
-[live_demo]: matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/optical_critical_demo.mlx
+[open_in_matlab_button]: https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg
+[optical_critical_live_demo]: matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/live_scripts/optical_critical_demo.mlx
 
 ## Publications based on PPML (not exhaustive list)
+
 1. S. Zanotto, ... A. Pitanti, "Photonic bands, superchirality, and inverse design of a chiral minimal metasurface", Nanophotonics (2019), DOI: 10.1515/nanoph-2019-0321
 2. S. Zanotto, ... A. Pitanti, "Optomechanics of Chiral Dielectric Metasurfaces", Advanced Optical Materials (2020), DOI: 10.1002/adom.201901507
 3. S. Zanotto, ... D. S. Wiersma, "Multichannel remote polarization control enabled by nanostructured Liquid Crystalline Networks", Applied Physics Letters (2019), DOI 10.1063/1.5096648
