@@ -1,4 +1,7 @@
+[![Open example in MATLAB Online][open_in_matlab_button]][optical_critical_live_demo]
+
 # PPML---Periodically-Patterned-Multi-Layer
+
 ## Electromagnetic properties of patterned multilayers based on RCWA (Rigorous Coupled Wave Analysis)
 
 Rigorous coupled wave analysis (RCWA) based on the scattering matrix (SM) algorithm is one of the most powerful tools for the electromagnetic simulation of patterned multilayer structures. 
@@ -6,25 +9,28 @@ Rigorous coupled wave analysis (RCWA) based on the scattering matrix (SM) algori
 PPML - RCWA is a project which implements the SM-RCWA, based on the formalisms of [a-d]. The current (2023-04-26) GitHub branch is a copy of codes also available at [MATLAB File Exchange](https://it.mathworks.com/matlabcentral/fileexchange/55401-ppml-periodically-patterned-multi-layer), that presently (2023-04-26) is at version 3.0.
 Three groups of functions are available: one is for 1-d patterns under TM polarization, another is for 1-d anisotropic (biaxial) patterns, the third for certain 2-d patterns.
 For 1-d TM patterns, currently available are functions for the calculation of
+
 - intensity reflectance, transmittance, and layer-by-layer absorbance 
 - the full 2x2 scattering matrix 
 - the E and S fields inside the structure
- 
+
 The proper factorization rules [c,d] make the code extremely performing, and fully suitable for the simulation of metal components (plasmonic gratings).
 Out-of-plane uniaxial materials can be treated.
 For 1-d biaxial media, the following function is available:
--  amplitude, phase and polarization of transmitted diffracted waves
+
+- amplitude, phase and polarization of transmitted diffracted waves
 
 For 2-d patterns, currently available are functions for the calculation of
--  zero-diffraction order scattering matrix (i.e, the 4x4 matrix whose submatrices are the transmission and reflection Jones matrices.)
+
+- zero-diffraction order scattering matrix (i.e, the 4x4 matrix whose submatrices are the transmission and reflection Jones matrices.)
 
 Allowed unit cell geometries are rectangular and L-shaped inclusions (see the Manual for details). The proper factorization rules are implemented [c,d], thus allowing for a fast convergence even in presence of metallic inclusions.
 Conducting interfaces can be seamlessly included in all the geometries by specifying their in-plane conductivity.
 The present code is distributed for free, but we kindly ask you to cite its source and, if applies, the publications below.
 Several publications are based on PPML (see below). For some of them, you can find the corresponding tutorial in the software package.
 
-
 ## Publications based on PPML (not exhaustive list)
+
 1. S. Zanotto, ... A. Pitanti, "Photonic bands, superchirality, and inverse design of a chiral minimal metasurface", Nanophotonics (2019), DOI: 10.1515/nanoph-2019-0321
 2. S. Zanotto, ... A. Pitanti, "Optomechanics of Chiral Dielectric Metasurfaces", Advanced Optical Materials (2020), DOI: 10.1002/adom.201901507
 3. S. Zanotto, ... D. S. Wiersma, "Multichannel remote polarization control enabled by nanostructured Liquid Crystalline Networks", Applied Physics Letters (2019), DOI 10.1063/1.5096648
@@ -41,11 +47,15 @@ Several publications are based on PPML (see below). For some of them, you can fi
 14. S. Zanotto, ... A. Tredicucci, “Intersubband polaritons in a one-dimensional surface plasmon photonic crystal”, Appl. Phys. Lett. 97, 231123 (2010).
 
 ## References for the method
-a. 	D. M. Whittaker & I. S. Culshaw, "Scattering-matrix treatment of patterned multilayer photonic structures",
+
+a.     D. M. Whittaker & I. S. Culshaw, "Scattering-matrix treatment of patterned multilayer photonic structures",
 Phys. Rev. B 60, 2610 (1999).
 
-b.	M. Liscidini, D. Gerace, L. C. Andreani & J. E. Sipe, "Scattering-matrix analysis of periodically patterned multilayers with asymmetric unit cells and birefringent media", Phys. Rev. B 77, 035324 (2008).
+b.    M. Liscidini, D. Gerace, L. C. Andreani & J. E. Sipe, "Scattering-matrix analysis of periodically patterned multilayers with asymmetric unit cells and birefringent media", Phys. Rev. B 77, 035324 (2008).
 
-c. 	L. Li. "Use of Fourier series in the analysis of discontinuous periodic structures". J. Opt. Soc. Am. A 13, 1870 (1996).
+c.     L. Li. "Use of Fourier series in the analysis of discontinuous periodic structures". J. Opt. Soc. Am. A 13, 1870 (1996).
 
-d.	Lalanne, Philippe, and G. Michael Morris, "Highly improved convergence of the coupled-wave method for TM polarization", JOSA A 13, 779 (1996).
+d.    Lalanne, Philippe, and G. Michael Morris, "Highly improved convergence of the coupled-wave method for TM polarization", JOSA A 13, 779 (1996).
+
+[open_in_matlab_button]: https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg
+[optical_critical_live_demo]: matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/live_scripts/optical_critical_demo.mlx
