@@ -58,4 +58,4 @@ c.     L. Li. "Use of Fourier series in the analysis of discontinuous periodic s
 d.    Lalanne, Philippe, and G. Michael Morris, "Highly improved convergence of the coupled-wave method for TM polarization", JOSA A 13, 779 (1996).
 
 [open_in_matlab_button]: https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg
-[optical_critical_live_demo]: matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/live_scripts/optical_critical_demo.mlx
+[optical_critical_live_demo]: https://matlab.mathworks.com/open/github/v1?repo=zan8simone/PPML---Periodically-Patterned-Multi-Layer&file=examples/live_scripts/optical_critical_demo.mlx
