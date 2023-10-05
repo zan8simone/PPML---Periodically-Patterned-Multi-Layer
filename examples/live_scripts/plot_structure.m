@@ -23,7 +23,6 @@ function plot_structure(L, f, d, a)
         if layer_name == "Internal layer"
             internal_layer_num = internal_layer_num + 1;
             fraction = f(internal_layer_num);
-
             x1 = x_mid - 0.5 * fraction * a;
             x2 = x_mid + 0.5 * fraction * a;
             x = [x1, x1, x2, x2];
@@ -33,9 +32,9 @@ function plot_structure(L, f, d, a)
     end
     ylim([start_depth(1), end_depth(end)])
     xlim([0, a])
-
-    ylabel("Layer depth (" + char(181) + "m)")
-    xlabel("Stripe spacing (" + char(181) + "m)")
+    mu = char(181);
+    ylabel("Layer depth (" + mu + "m)")
+    xlabel("Stripe spacing (" + mu + "m)")
     legend('Direction','reverse')
 end
 
