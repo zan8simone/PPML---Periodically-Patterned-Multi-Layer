@@ -7,7 +7,7 @@ function plot_structure(L, f, d, a)
     figure
     end_depth = cumsum(d);
     start_depth = [0, end_depth(1:end -1)];
-    colours = ["r", "b", "g", "c", "m", "y", "k"];
+    colours = ["b", "r", "g", "c", "m", "y", "k"];
     x_mid = 0.5 * a;
     internal_layer_num = 0;
     for layer = 1:length(d)
@@ -27,7 +27,7 @@ function plot_structure(L, f, d, a)
             x2 = x_mid + 0.5 * fraction * a;
             x = [x1, x1, x2, x2];
             y = [start_depth(layer), end_depth(layer), end_depth(layer), start_depth(layer)];
-            patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.3)
+            patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.5)
         end
     end
     ylim([start_depth(1), end_depth(end)])
