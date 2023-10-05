@@ -37,7 +37,7 @@ function optical_critical(a, h, theta, nu)
 
     %        superstr.  |  patt. Au  |  patt. GaAs  |  unp. GaAs  | dop. GaAs | subst.
     f     = [              .77          .77            1            1                       ]; % fraction of B in A
-    d     = [    30        .2           h              (9-h)        1                 30    ]; % microns
+    d     = [    30        .2           h              (9-h)        1                 30    ]; % depth of layer in microns
     epsxA = [              1            1              1            1                       ]; % material A
     epszA = [              1            1              1            1                       ]; %
     sigma = [          0            0              0            0                0          ];
