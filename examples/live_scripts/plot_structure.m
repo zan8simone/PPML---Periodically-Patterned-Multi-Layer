@@ -30,7 +30,7 @@ function plot_structure(L, f, d, a)
             patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.5)
         end
     end
-    ylim([start_depth(1), end_depth(end)])
+    ylim([round((end_depth(1) - 10)/10) * 10, round((start_depth(end) + 10)/10) * 10])
     xlim([0, a])
     mu = char(181);
     ylabel("Layer depth (" + mu + "m)")
