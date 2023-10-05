@@ -43,6 +43,7 @@ function optical_critical(a, h, theta, nu)
     sigma = [          0            0              0            0                0          ];
 
     epssup = 1;
+    plot_structure(f, d, a)
     wb = waitbar(0, 'Starting', 'Name', 'Calculating reflectance');
 
     for i = 1:numnu
@@ -76,7 +77,7 @@ function optical_critical(a, h, theta, nu)
     close(wb)
     %%
     if numtheta > 7
-        clf
+        figure
         s = pcolor(theta,nu,R);
         set(s,'edgecolor','none')
         xlabel('Incidence angle (deg)')
