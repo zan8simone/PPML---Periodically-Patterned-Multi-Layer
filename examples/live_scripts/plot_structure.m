@@ -24,7 +24,8 @@ function plot_structure(L, f, d, a)
     ylim([start_depth(1), end_depth(end)])
     xlim([0, a])
 
-    ylabel("Layer depth")
-    legend()
+    ylabel("Layer depth (" + char(181) + "m)")
+    xlabel("Stripe spacing (" + char(181) + "m)")
+    legend('Direction','reverse')
 end
 
