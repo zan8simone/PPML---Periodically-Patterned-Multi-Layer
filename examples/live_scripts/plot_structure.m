@@ -1,4 +1,4 @@
-function plot_structure(L, f, d)
+function plot_structure(L, f, d, a)
     % plot_structure Plot structure of material for visual check
     % patch to fill between lines
     % or yregion
@@ -18,6 +18,7 @@ function plot_structure(L, f, d)
         yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), DisplayName=layer_name)
     end
     ylim([start_depth(1), end_depth(end)])
+    xlim([0, a])
 
     ylabel("Layer depth")
     legend()
