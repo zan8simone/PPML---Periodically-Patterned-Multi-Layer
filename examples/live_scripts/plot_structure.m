@@ -36,5 +36,6 @@ function plot_structure(f, d, a)
     ylabel("Layer depth (" + mu + "m)")
     xlabel("Stripe spacing (" + mu + "m)")
     legend('Direction','reverse')
+    title("Sample structure")
 end
 
