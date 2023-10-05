@@ -1,6 +1,5 @@
-function plot_structure(L, f, d, a)
+function plot_structure(f, d, a)
     % plot_structure Plot structure of material for visual check
-    % L: number of layers
     % f: fraction of material B in material A
     % d: depth of layer (microns)
     % a: stripe spacing (microns)
