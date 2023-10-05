@@ -17,7 +17,7 @@ function plot_structure(f, d, a)
         else
             layer_name = "Internal layer";
         end
-        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), DisplayName=layer_name, FaceAlpha=0.8)
+        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), DisplayName=layer_name, FaceAlpha=0.7)
 
         if layer_name == "Internal layer"
             internal_layer_num = internal_layer_num + 1;
