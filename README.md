@@ -2,6 +2,8 @@
 
 # PPML---Periodically-Patterned-Multi-Layer
 
+Requires minimum MATLAB version R2023b.
+
 ## Electromagnetic properties of patterned multilayers based on RCWA (Rigorous Coupled Wave Analysis)
 
 Rigorous coupled wave analysis (RCWA) based on the scattering matrix (SM) algorithm is one of the most powerful tools for the electromagnetic simulation of patterned multilayer structures. 
