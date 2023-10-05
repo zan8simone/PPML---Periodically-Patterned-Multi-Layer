@@ -2,6 +2,10 @@ function plot_structure(L, f, d, a)
     % plot_structure Plot structure of material for visual check
     % patch to fill between lines
     % or yregion
+    % L: number of layers
+    % f: fraction of material B in material A
+    % d: depth of layer (microns)
+    % a: stripe spacing (microns)
     figure
     end_depth = cumsum(d);
     start_depth = [0, end_depth(1:end -1)];
