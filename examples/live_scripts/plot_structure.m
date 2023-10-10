@@ -4,12 +4,15 @@ function plot_structure(f, d, a)
     % d: depth of layer (microns)
     % a: stripe spacing (microns)
     figure
-    set(gca, 'YDir','reverse')
     end_depth = cumsum(d);
     start_depth = [0, end_depth(1:end -1)];
+
+    % Flip y axis values for consistency with the manual
+    set(gca, 'YDir','reverse')
     z_offset = start_depth(end);
     start_depth = -(start_depth - z_offset);
     end_depth = -(end_depth - z_offset);
+
     colours = ["b", "r", "g", "c", "m", "y", "k"];
     internal_layer_num = 0;
     substrate_display_depth = 10;
@@ -26,11 +29,6 @@ function plot_structure(f, d, a)
             layer_name = "Superstrate";
             text(0.45 * a/2, ymin + 0.5 * substrate_display_depth, layer_name, 'FontSize',12);
         else
-            layer_name = "Internal layer";
-        end
-        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), FaceAlpha=0.7)
-
-        if layer_name == "Internal layer"
             internal_layer_num = internal_layer_num + 1;
             fraction = f(internal_layer_num);
             half_x_width = 0.5 * fraction * a;
@@ -40,8 +38,8 @@ function plot_structure(f, d, a)
             y = [start_depth(layer), end_depth(layer), end_depth(layer), start_depth(layer)];
             patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.5)
         end
+        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), FaceAlpha=0.7)
     end
-
 
     mu = char(181);
     ylabel("z coordinate (" + mu + "m)")
