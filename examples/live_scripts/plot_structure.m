@@ -6,8 +6,10 @@ function plot_structure(f, d, a)
     figure
     end_depth = cumsum(d);
     start_depth = [0, end_depth(1:end -1)];
+    z_offset = start_depth(end);
+    start_depth = start_depth - z_offset;
+    end_depth = end_depth - z_offset;
     colours = ["b", "r", "g", "c", "m", "y", "k"];
-    x_mid = 0.5 * a;
     internal_layer_num = 0;
     for layer = 1:length(d)
         if layer == 1
@@ -22,8 +24,9 @@ function plot_structure(f, d, a)
         if layer_name == "Internal layer"
             internal_layer_num = internal_layer_num + 1;
             fraction = f(internal_layer_num);
-            x1 = x_mid - 0.5 * fraction * a;
-            x2 = x_mid + 0.5 * fraction * a;
+            half_x_width = 0.5 * fraction * a;
+            x1 = - half_x_width;
+            x2 = half_x_width;
             x = [x1, x1, x2, x2];
             y = [start_depth(layer), end_depth(layer), end_depth(layer), start_depth(layer)];
             patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.5)
@@ -31,10 +34,10 @@ function plot_structure(f, d, a)
     end
     substrate_display_depth = 10;
     ylim([(end_depth(1) - substrate_display_depth), start_depth(end) + substrate_display_depth])
-    xlim([0, a])
+    xlim([-a/2, a/2])
     mu = char(181);
-    ylabel("Layer depth (" + mu + "m)")
-    xlabel("Stripe spacing (" + mu + "m)")
+    ylabel("z coordinate (" + mu + "m)")
+    xlabel("x coordinate (" + mu + "m)")
     legend('Direction','reverse')
     title("Sample structure")
 end
