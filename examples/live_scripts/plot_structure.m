@@ -12,15 +12,23 @@ function plot_structure(f, d, a)
     end_depth = -(end_depth - z_offset);
     colours = ["b", "r", "g", "c", "m", "y", "k"];
     internal_layer_num = 0;
+    substrate_display_depth = 10;
+    ymin = start_depth(end) - substrate_display_depth;
+    ymax = (end_depth(1) + substrate_display_depth);
+    ylim([ymin,ymax])
+    xlim([-a/2, a/2])
+
     for layer = 1:length(d)
         if layer == 1
             layer_name = "Substrate";
+            text(0.45 * a/2, ymax - 0.5 * substrate_display_depth, layer_name, 'FontSize',12);
         elseif layer == length(d)
             layer_name = "Superstrate";
+            text(0.45 * a/2, ymin + 0.5 * substrate_display_depth, layer_name, 'FontSize',12);
         else
             layer_name = "Internal layer";
         end
-        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), DisplayName=layer_name, FaceAlpha=0.7)
+        yregion(start_depth(layer), end_depth(layer), FaceColor=colours(layer), FaceAlpha=0.7)
 
         if layer_name == "Internal layer"
             internal_layer_num = internal_layer_num + 1;
@@ -33,13 +41,11 @@ function plot_structure(f, d, a)
             patch(x, y, 'k', 'HandleVisibility', 'off', 'FaceAlpha', 0.5)
         end
     end
-    substrate_display_depth = 10;
-    ylim([start_depth(end) - substrate_display_depth, (end_depth(1) + substrate_display_depth)])
-    xlim([-a/2, a/2])
+
+
     mu = char(181);
     ylabel("z coordinate (" + mu + "m)")
     xlabel("x coordinate (" + mu + "m)")
-    legend('Direction','reverse')
     title("Sample structure")
 end
 
