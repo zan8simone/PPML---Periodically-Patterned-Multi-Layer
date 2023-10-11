@@ -3,12 +3,20 @@ function plot_structure(f, d, a)
     % f: fraction of material B in material A
     % d: depth of layer (microns)
     % a: stripe spacing (microns)
+    % All these arrays are ordered from superstrate to substrate,
     figure
+
+    % Flip order of layers so substrate is at the bottom of the plot
+    d = flip(d);
+    f = flip(f);
+
     end_depth = cumsum(d);
     start_depth = [0, end_depth(1:end -1)];
 
-    % Flip y axis values for consistency with the manual
+    % Reverse z coordinate axis direction
     set(gca, 'YDir','reverse')
+
+    % Offset z values so bottom of superstrate is z=0
     z_offset = start_depth(end);
     start_depth = -(start_depth - z_offset);
     end_depth = -(end_depth - z_offset);
