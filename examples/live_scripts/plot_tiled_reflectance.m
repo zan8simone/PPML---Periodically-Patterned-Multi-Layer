@@ -3,7 +3,7 @@
 % for various angles of incidence
 
 function plot_tiled_reflectance(R, angle, frequency)
-    clf
+    figure
     t = tiledlayout("horizontal");
     title(t, "Reflectance for incidence angles")
     xlabel(t, "Reflectance")
